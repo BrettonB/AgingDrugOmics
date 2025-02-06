@@ -1,0 +1,87 @@
+---
+title: "Plot10KCV"
+output: html_document
+date: "2025-01-27"
+---
+
+```{r setup, include=FALSE}
+#Put in folder "XGBoost_Analysis_10k_20i_details_fig1_real_All_Predictions_All_Groups.xlsx",
+#"XGBoost_Analysis_10k_20i_details_fig1_real_Control_Results.xlsx", "all_loo_predictions.xlsx"
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(openxlsx)
+library(tidyr)
+library(stats)
+source("Plot10KCVFuncs.R")
+```
+Call the function
+```{r}
+# Function call
+#the all_loo_predictions file is not actually a loo. In this case, it is just the 10K20i trained on all data types. not LOO.
+source("Plot10KCVFuncs.R")
+df<- read.xlsx("../Step2_GeneratePythonControlData/XGBoost_Analysis_10k_20i_details_fig1_All_Predictions_All_Groups.xlsx")
+
+results <- process_and_visualize_loo_results(
+  all_loo_predictions_file = "../Step2_GeneratePythonControlData/XGBoost_Analysis_10k_20i_details_fig1_All_Predictions_All_Groups.xlsx",
+  control_predictions_file = "../Step2_GeneratePythonControlData/XGBoost_Analysis_10k_20i_details_fig1_Control_Results.xlsx",
+  output_prefix = "XGBoost_not_LOO_Fig1_umhet3_10k_20i_for_pub"
+)
+
+#move to paper folder
+file.rename(from="XGBoost_not_LOO_Fig1_umhet3_10k_20i_for_pub_Predicted_Median_Lifespan_Extension.pdf",to="../Paper_Figures/XGBoost_not_LOO_Fig1_umhet3_10k_20i_for_pub")
+file.rename(from="XGBoost_not_LOO_Fig1_umhet3_10k_20i_for_pub_t_test_results.xlsx",to="../Paper_Figures/XGBoost_not_LOO_Fig1_umhet3_10k_20i_for_pub_t_test_results.xlsx")
+
+# Display the graph
+print(results$combined_graph)
+(results$loo_predictions)
+
+# Print significant results
+significant_results <- results$t_test_results %>%
+  filter(p_value < 0.05) %>%
+  arrange(Dataset, p_value)
+
+print("Significant results (p < 0.05):")
+print(significant_results)
+
+plot_data <- results$plot_data
+
+```
+
+
+
+
+
+
+Save text files with dependencies and version
+```{r}
+
+# Get the R version
+r_version <- R.version.string
+
+# Get the list of loaded packages and their versions
+loaded_packages <- sessionInfo()$otherPkgs
+package_info <- data.frame(
+  Package = names(loaded_packages),
+  Version = sapply(loaded_packages, function(pkg) pkg$Version),
+  stringsAsFactors = FALSE
+)
+
+# Define the output file
+output_file <- "../Paper_Figures/Package_Info/Step5_R_session_and_packgage_version_info.txt"
+
+# Write the R version to the file
+writeLines(paste("R Version:", r_version), output_file)
+
+# Write the package information
+write.table(package_info, file = output_file, append = TRUE, row.names = FALSE, sep = "\t", quote = FALSE)
+
+cat("Session info written to", output_file, "\n")
+
+
+```
