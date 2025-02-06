@@ -1,0 +1,1052 @@
+Order,Feature
+1,TG 48:3|TG 14:0_16:1_18:2
+2,TG 58:5|TG 22:1_18:2_18:2
+3,N-Acetyltyrosine
+4,TG 56:9|TG 16:1_18:2_22:6
+5,TG 55:7|TG 15:0_18:1_22:6
+6,N-Methylisoleucine
+7,"(3-Oxo-2,3-dihydro-4H-1,4-benzoxazin-4-yl)acetic acid"
+8,TG 64:16|TG 20:4_22:6_22:6
+9,2[4-(Trifluoromethoxy)phenyl]cyclopropanecarboxylic acid
+10,DG 34:2|DG 16:0_18:2
+11,gamma-Glutamyltyrosine
+12,3-Hydroxybutyric acid
+13,Methyl-beta-galactopyranoside
+14,2-Thiobarbituric acid
+15,TG O-53:9|TG O-19:5_17:2_17:2
+16,DG 36:3
+17,"1,5-Anhydro-D-sorbitol"
+18,SM 36:1;2O
+19,4-Imidazoleacetic acid
+20,PE 36:2|PE 18:0_18:2
+21,(+)-Muscarine
+22,TG 52:6|TG 16:0_16:1_20:5
+23,"(2-oxo-2,3-dihydro-1H-indol-3-yl)acetic acid"
+24,PI 40:5|PI 18:0_22:5
+25,PE P-38:6|PE P-16:0_22:6
+26,Pipecolic acid
+27,PC 35:4
+28,LPC 19:0/0:0
+29,PC 41:6|PC 19:0_22:6
+30,(2E)-2-(Propan-2-yl)but-2-enedioic acid
+31,gamma-Glutamylleucine
+32,TG 62:14|TG 18:2_22:6_22:6
+33,TG 66:18|TG 22:6_22:6_22:6
+34,(4-Methylphenyl)oxidanesulfonic acid
+35,Mandelic acid
+36,"(9E,11Z)-8-Hydroxyoctadeca-9,11-dienoic acid"
+37,3-Methyl-2-oxovaleric acid
+38,3-Carboxy-6-methylcoumarin
+39,(2R)-3-Hydroxyisovaleroylcarnitine
+40,1-(Piperidin-4-yl)ethan-1-ol
+41,TG 60:8|TG 20:0_18:2_22:6
+42,DG 40:8|DG 18:2_22:6
+43,3-Methylglutarylcarnitine
+44,"(3E)-4-(1-Hydroxy-2,2,6-trimethyl-4-oxocyclohexyl)but-3-en-2-yl hexopyranoside"
+45,DG 50:0
+46,"Benzeneethanamine, 3,5-dimethoxy-.alpha.-methyl-4-propoxy-"
+47,PC 38:7
+48,LPC 14:0/0:0
+49,(3-Carboxypropyl)trimethylammonium
+50,2-Propanamidoacetic acid
+51,TG 48:1|TG 14:0_16:0_18:1
+52,PE P-40:6|PE P-18:0_22:6
+53,"(1,5-Dimethyl-1H-pyrazol-3-yl)methylamine"
+54,TG 50:0|TG 16:0_16:0_18:0
+55,2-(1H-Pyrazol-1-yl)benzylamine
+56,TG 46:2|TG 12:0_16:0_18:2
+57,3-Hydroxyvaleric acid
+58,5-Methylcytidine
+59,(S)-2-Ureidopentanedioic acid
+60,CAR 18:0
+61,1-Hexadecanoyl-2-octadecadienoyl-sn-glycero-3-phosphocholine
+62,HexCer 40:1;2O|HexCer 18:1;2O/22:0
+63,(N-(-2-Acetamido))-2-aminoethanesulfonic acid
+64,TG 64:14|TG 18:2_22:6_24:6
+65,PC 40:5
+66,Acetyl-threonine
+67,PC 34:2;O|PC 16:0_18:2;O_a
+68,TG 53:0|TG 16:0_18:0_19:0
+69,Cysteic Acid
+70,TG 58:11|TG 16:0_20:5_22:6
+71,Carnitine
+72,Malic acid
+73,Hexuronic acid
+74,DG 38:7|DG 18:2_20:5
+75,Glutamic acid
+76,Nicotinamide
+77,TG 52:0|TG 16:0_18:0_18:0
+78,5-Oxo-1-propyl-2-pyrrolidineacetic acid
+79,Deoxycholic acid
+80,N-Acetylaspartylglutamic acid
+81,PC 32:2|PC 14:0_18:2
+82,Betaine
+83,PI 36:1|PI 18:0_18:1_a
+84,FA 10:0_b
+85,SL 32:0;0O
+86,Methacholine
+87,4-Hydroxybenzoic acid
+88,SE 28:1/20:3
+89,2-Hydroxyphenylacetic acid
+90,TG 58:12|TG 18:2_18:4_22:6
+91,Aleuritic acid
+92,PE 36:1|PE 18:0_18:1
+93,PC 33:2|PC 15:0_18:2
+94,DG 34:3
+95,"4-(1,3-Benzothiazol-2-yl)butanoic acid"
+96,TG 60:12|TG 18:1_20:5_22:6
+97,Ergothioneine
+98,TG 47:0|TG 15:0_16:0_16:0
+99,Glutamine
+100,FA 15:0
+101,N-omega-Acetylhistamine
+102,Dihydrocapsaicin
+103,PC O-34:3
+104,"1-(2-Hydroxyethyl)-2,2,6,6-tetramethyl-4-piperidinol"
+105,Turanose
+106,(3-Oxo-2-piperazinyl)acetic acid
+107,2-{2-[2-(Methacryloyloxy)ethoxy]ethoxy}ethyl 2-methylacrylate
+108,2-(3-Methylbenzyl)butanedioic acid
+109,"1,4-Dihydroxy-2-naphthoic acid"
+110,(R)-Butyrylcarnitine
+111,1-Pentadecanoyl-sn-glycero-3-phosphocholine
+112,gamma-Glutamyl-alanine
+113,Salicylic acid
+114,DG 38:3
+115,PC 32:1|PC 16:0_16:1
+116,PI 38:5|PI 18:0_20:5
+117,1-Oleoyl-sn-glycero-3-phosphocholine
+118,2-Methoxy-5-nitrophenol
+119,TG O-52:0|TG O-18:0_16:0_18:0
+120,Thr-His
+121,SM 36:2;2O
+122,DG 34:2
+123,Ketoisovaleric acid
+124,3-Methylhistidine
+125,FA 17:0
+126,DG 34:1
+127,CAR 20:4
+128,2-Hydroxybenzaldehyde
+129,CAR 13:0
+130,3-(3-Hydroxyphenyl)propionic acid
+131,"(2R)-7-Methoxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl .beta.-D-glucopyranoside"
+132,Acetaminophen sulfate
+133,Benzyldimethylstearylammonium
+134,1-Myristoyl-sn-glycero-3-phosphocholine
+135,"3-Oxo-1,8-octanedicarboxylic acid"
+136,PC 40:6|PC 18:0_22:6
+137,PI 36:4|PI 16:0_20:4_a
+138,2-Hydroxy-5-methoxybenzoic acid
+139,1-Palmitoyl-2-docosahexaenoyl-sn-glycero-3-phosphocholine
+140,P-Anisic acid
+141,2-(9-Decenyl)glutaconic acid
+142,FA 25:0_a
+143,1-Hexadecyl-sn-glycero-3-phosphocholine
+144,Orotic acid
+145,2-Deoxyuridine
+146,Glu-Thr
+147,PE 40:7|PE 18:1_22:6
+148,1-Arachidoyl-2-hydroxy-sn-glycero-3-phosphocholine
+149,N-Methyllysine
+150,PI 36:2
+151,Ala-Ala
+152,Asn-Val
+153,1-Methylguanine
+154,PC O-38:4|PC O-18:0_20:4
+155,PC 39:6
+156,"3[(2-Methylbenzyl)sulfanyl]-1H-1,2,4-triazol-5-ylamine"
+157,5-Hydroxymethyl-6-methyluracil
+158,Zinterol
+159,"1,4-Cyclohexanedicarboxylic acid"
+160,FA 26:0;O
+161,PC O-40:7
+162,O2_PE 36:1
+163,"4-Isoxazolepropanoic acid, alpha-amino-2,3-dihydro-5-methyl-3-oxo-"
+164,PC O-37:4
+165,1-Heptadecanoyl-sn-glycero-3-phosphocholine
+166,"1,3-Dimethylbenzene-1-sulfonic acid"
+167,PI 38:5|PI 18:1_20:4
+168,3-Aminoisobutyric acid
+169,Glycocholic acid
+170,Daidzein
+171,2-Aminonicotinic acid
+172,TG 48:2|TG 14:0_16:0_18:2
+173,4-Hydroxy-6-methylnicotinic acid
+174,DG 38:5
+175,3-Hydroxypropanoic acid
+176,Ser-Val
+177,ST 24:1;O5
+178,2-Hydroxypalmitic acid
+179,FA 32:1
+180,Choline
+181,Cer 34:2;2O|Cer 18:1;2O/16:1
+182,Sorbose
+183,4-Hydroxybenzoic acid propyl ester
+184,SM 34:0;2O
+185,N-(1H-Indol-3-ylacetyl)glycine
+186,Palitantin
+187,LPC O-18:1
+188,Isoquinoline-3-carboxylic acid
+189,PC 34:2;O|PC 16:0_18:2;O_b
+190,Kynurenic acid
+191,"7,8-Dihydrobiopterin"
+192,3-Hydroxy-3-methylglutaric acid_3-Hydroxy-3-methylglutaric acid
+193,Leu-Leu
+194,glycerol-alpha-phosphate
+195,PE O-38:6|PE O-16:0_22:6
+196,1-Stearoyl-2-hydroxy-sn-glycero-3-phosphocholine
+197,1-Oleoyl-sn-glycero-3-phosphoethanolamine
+198,Equol
+199,Cer 41:1;2O|Cer 18:1;2O/23:0
+200,1-Methylpiperidine-3-carboxylic acid
+201,O1_FA 20:5; (eicosapentaenoic acid)_b
+202,"12R-Hydroxy-5Z,8Z,10E,14Z-eicosatetraenoic acid"
+203,"N,N-Dimethylarginine"
+204,N-alpha-Acetyl-arginine
+205,Homovanillic acid
+206,Pseudouridine
+207,SM 41:1;2O
+208,TG 49:0|TG 15:0_16:0_18:0
+209,TG 58:4|TG 22:0_18:2_18:2
+210,PC O-38:6|PC O-16:0_22:6
+211,LPC 20:0/0:0
+212,3-Oxocholic acid
+213,ST 27:1;O;S
+214,PC O-32:0
+215,Phosphoric acid
+216,Ala-Thr
+217,4-Hydroxyquinoline
+218,Pro-Leu
+219,Pentaethylene glycol
+220,DG 40:8
+221,N-Acetylmannosamine
+222,TG 60:11|TG 18:2_20:3_22:6
+223,Glyceraldehyde
+224,PC 36:2
+225,FA 18:4
+226,LPE O-16:1
+227,PE O-40:7|PE O-18:1_22:6
+228,Glufosinate
+229,N-Methylhistidine
+230,Ribonic acid gamma-lactone
+231,"1,4-Butynediol"
+232,1-Acetylimidazole
+233,2-Amino-3-methoxybenzoic acid
+234,LPC 16:1/0:0
+235,"4-Fluorobenzene-1,3-dicarboxylic acid"
+236,"2,6-Diaminopimelic acid"
+237,Phenylacetylglycine
+238,PI 34:1|PI 16:0_18:1
+239,DG 50:1
+240,Ile-Leu
+241,1-Methyladenosine
+242,5-Butyl-1H-pyrazole-3-carboxylic acid
+243,"3-Cyclopentene-1-octanoic acid, 2-(3-hydroxy-1-penten-1-yl)-5-oxo-"
+244,FA 15:1
+245,TG 58:9|TG 18:1_18:2_22:6
+246,Pyridoxamine
+247,PI 38:3|PI 18:0_20:3
+248,PC O-40:6
+249,Hydroferulic acid
+250,Cysteine-glutathione disulfide
+251,"5-Methyl-5,6-Dihydrouracil"
+252,Glutathione (reduced)
+253,Hippuric acid
+254,"Dihydro-4,4-dimethyl-2,3-furandione"
+255,Hexanoylglycine
+256,Docosan-1-amine
+257,Hexanoyl-L-carnitine
+258,Dihydrouracil
+259,Hexaethylene glycol
+260,Hexadecanedioic acid
+261,Guanine
+262,Dodecanedioic acid
+263,Docosahexanoic acid
+264,Diisodecyl phthalate
+265,"Gulono-1,4-lactone"
+266,Epigallocatechin
+267,DMSO
+268,HexCer 42:2;2O|HexCer 18:1;2O/24:1
+269,DG 36:2
+270,Indole-3-acetonitrile
+271,Indole-3-carboxaldehyde
+272,Indole-3-carboxylic acid
+273,DG 34:1|DG 16:0_18:1
+274,Indolelactic acid
+275,Indoxyl sulfate
+276,Inosine
+277,Homogentisic acid
+278,Dexpanthenol
+279,Isobutyric acid
+280,delta-Hydroxylysine
+281,Decanoyl-L-carnitine
+282,Daidzein 4'-sulfate
+283,Isocitric acid lactone
+284,Isoxanthopterin
+285,Cytosine
+286,L-Glutarylcarnitine
+287,DG 32:0
+288,His-Pro
+289,Histidine
+290,DG 40:7|DG 18:1_22:6
+291,Homoarginine
+292,DG 38:7
+293,Homocitrulline
+294,epsilon-Dimethyl-lysine
+295,Homovanillic acid sulfate
+296,Indole-3-acetamide
+297,DG 36:5
+298,DG 36:4|DG 18:2_18:2
+299,DG 36:4
+300,Hypoxanthine
+301,Icaridin
+302,DG 36:3|DG 18:1_18:2
+303,Imidazole
+304,Iminodiacetic acid
+305,DG 36:2|DG 18:1_18:1
+306,DG 36:5|DG 18:2_18:3
+307,FA 20:4;O
+308,FA 20:4;2O
+309,FA 20:4
+310,FA 27:0
+311,FA 28:0
+312,FA 28:7
+313,FA 20:3;O
+314,FA 20:3
+315,Glyceric acid
+316,FA 34:1
+317,FA 20:1
+318,FA 19:1
+319,FA 36:0
+320,FA 9:0
+321,FA 19:0
+322,Ferulic acid
+323,FA 18:3;O
+324,FA 20:2
+325,FA 23:0
+326,FA 22:6;O
+327,FA 24:0
+328,FA 22:6
+329,FA 24:0;O
+330,FA 22:5;O
+331,FA 24:1
+332,FA 22:5
+333,FA 26:0
+334,FA 24:6
+335,Cystine
+336,FA 22:2
+337,FA 22:1
+338,FA 22:0
+339,FA 21:5
+340,FA 21:0
+341,FA 20:5
+342,FA 25:0_b
+343,FA 24:5
+344,Gln-Ser
+345,Glucosamine
+346,FA 14:1
+347,Glutaric acid
+348,FA 10:0_a
+349,Gly-Gly
+350,Gly-Pro
+351,Gly-Val
+352,FA 18:3
+353,Ethylhexadecyldimethylammonium
+354,Ethyl sulfate
+355,Erythronolactone
+356,Glycerophosphocholine
+357,Glycitein
+358,Glycyltyrosine
+359,erythro-Sphingosine-1-phosphate
+360,Guanidinoacetic acid
+361,Guanidinopropionic acid
+362,Ethylmalonic acid
+363,Formononetine
+364,Gabapentin
+365,FA 18:2;O
+366,FA 18:2;2O
+367,FA 18:2
+368,Galactonic acid
+369,Galactosamine
+370,Galactosamine-1-phosphate
+371,Gln-Ala
+372,FA 18:1
+373,FA 18:0;O
+374,gamma-Aminobutyric acid
+375,gamma-Glutamylglutamine
+376,FA 17:1
+377,gamma-Glutamylmethionine
+378,FA 16:2
+379,FA 16:1
+380,Gentisinic acid
+381,FA 18:1;O
+382,3-Aminopyridine
+383,3-Acetoxypyridine
+384,3-(Trifluoromethyl)cinnamic acid
+385,2(1H)-Pyridinone
+386,2'-O-Methyluridine
+387,2'-Deoxycytidine
+388,"2,8-Quinolinediol"
+389,"2,6-Dihydroxybenzoic acid"
+390,"2,3-Dimethoxy-5-methylbenzoquinone"
+391,"2,3-Dihydroxy-2-methylbutanoic acid"
+392,"2,2-Dimethyl-2,3-dihydro-4H-1,3-benzoxazin-4-one"
+393,2-Piperidinecarboxamide
+394,Kynurenine
+395,2-Oleoyl-1-palmitoyl-sn-glycero-3-phosphocholine
+396,2-Methylglutamic acid
+397,2-Methylbutyryl-L-carnitine
+398,2-Methyl-4-phenylazophenylamine
+399,2-Mercaptomethylbenzimidazole
+400,2-Isopropylmalic acid
+401,2-Hydroxyquinoline
+402,2-Hydroxyisobutyric acid
+403,2-Hydroxy-4-methylpentanoic acid
+404,2-dGMP
+405,2-Deoxyribose
+406,2-Dec-9-enylpentanedioic acid
+407,2-Phosphoglyceric acid
+408,4-Acetamidobutyric acid
+409,3'-O-Methylinosine
+410,3'-O-Methylguanosine
+411,3'-O-Methylcytidine
+412,"3,5-Dichlorosalicylic acid"
+413,"3,4-Dihydro-3-oxo-2H-(1,4)-benzoxazin-2-ylacetic acid"
+414,"3,3-Dimethylglutaric acid"
+415,"3,3-Dimethylacrylic acid"
+416,3-Ureidopropionic acid
+417,3-Pyridinemthanol
+418,3-Propyl-1H-pyrazole-5-carboxylic acid
+419,3-Phenyllactic acid
+420,3-Fluoro-5-(methoxycarbonyl)benzoic acid
+421,3-Methylcytidine
+422,3-Methylcrotonylglycine
+423,3-Methyladipic acid
+424,3-Indoleacetic acid
+425,3-Hydroxysebacic acid
+426,3-Hydroxyoctanoic acid
+427,3-Hydroxyoctadecanoic acid
+428,3-Hydroxydodecanoic acid
+429,3-Hydroxybutyrylcarnitine
+430,3-Hydroxyanthranilic acid
+431,"3-Hydroxy-3-methyl-2,3-dihydro-1H-indol-2-one"
+432,"3-Hydroxy-2-((9Z,12Z)-octadeca-9,12-dienoyloxy)propyl 2-(trimethylazaniumyl)ethyl phosphate"
+433,3-Galloylgallocatechin
+434,3-Oxostearic acid
+435,TG O-55:2|TG O-19:1_16:0_20:1
+436,TG O-54:3|TG O-18:0_18:1_18:2
+437,TG O-54:2|TG O-20:0_16:0_18:2
+438,TG O-54:1|TG O-20:0_16:0_18:1
+439,TG O-54:0|TG O-20:0_16:0_18:0
+440,Vitamin C
+441,2-Amino-3-(dimethylamino)propionic acid
+442,2-Acetylpyrazine
+443,2-(Formylamino)benzoic acid
+444,2-(4-Morpholinyl)-1-phenylethanol
+445,2-(4-Fluorophenyl)acetohydrazide
+446,Xanthine
+447,2-Aminoisobutyric acid
+448,11-Hydroxyundecanoic acid
+449,10-Hydroxydecanoic acid
+450,"1,5-Anhydrosorbitol"
+451,"1,3-Cyclohexanedicarboxylic acid"
+452,"1,2-dioleoyl-sn-glycero-3-phosphatidylcholine_1,2-dioleoyl-sn-glycero-3-phosphatidylcholine"
+453,"1,2-Dimethylimidazole"
+454,"1,2-Diamino-2-methylpropane_1,2-Diamino-2-methylpropane"
+455,1-Stearoyl-2-hydroxy-sn-glycero-3-phosphoethanolamine
+456,1-Stearoyl-2-arachidonyl-sn-glycero-3-phosphocholine
+457,1-Palmitoyl-sn-glycero-3-phosphocholine
+458,1-Palmitoyl-2-hydroxy-sn-glycero-3-phosphoethanolamine
+459,1-Palmitoyl-2-azelaoylphosphatidylcholine
+460,2-((2R)-2-Hydroxycyclohexyl)acetic acid
+461,2-Aminocaprylic acid
+462,2-Aminoadipic acid
+463,Thr-Glu
+464,Thr-Gln
+465,Thiazolidine-4-carboxylic acid
+466,Thiamine
+467,Theanine
+468,TG O-62:7|TG O-22:1_18:0_22:6
+469,TG O-61:3|TG O-19:1_20:1_22:1
+470,Xanthurenic acid
+471,TG O-60:6|TG O-20:0_18:0_22:6
+472,TG O-60:3|TG O-22:1_18:1_20:1
+473,TG O-55:9|TG O-13:1_21:4_21:4
+474,TG O-59:2|TG O-19:0_18:2_22:0
+475,TG O-58:6|TG O-20:0_16:0_22:6
+476,TG O-58:4|TG O-22:1_18:1_18:2
+477,TG O-58:3|TG O-22:1_18:0_18:2
+478,TG O-57:2|TG O-19:0_18:1_20:1
+479,TG O-57:13|TG O-21:5_18:4_18:4
+480,TG O-57:1|TG O-19:1_16:0_22:0
+481,TG O-57:0|TG O-17:0_18:0_22:0
+482,TG O-56:6|TG O-18:0_16:0_22:6
+483,TG O-56:4|TG O-19:2_18:2_19:0
+484,TG O-56:3|TG O-20:0_18:1_18:2
+485,TG O-56:2|TG O-20:0_18:0_18:2
+486,TG O-56:1|TG O-20:0_18:0_18:1
+487,TG O-59:3|TG O-19:1_20:1_20:1
+488,Cer 33:1;2O|Cer 17:1;2O/16:0
+489,Cedrin
+490,CE 18:3
+491,CE 16:1
+492,Catechol
+493,Carnosine
+494,Carbanilide
+495,CAR 6:0
+496,CAR 4:0
+497,CAR 20:5
+498,CAR 20:1
+499,CAR 18:2
+500,4-Acetylbutyric acid
+501,CAR 16:2
+502,CAR 16:1
+503,CAR 14:1
+504,CAR 14:0
+505,CAR 12:0
+506,Caffeic acid
+507,Butyrylcholine
+508,Bradykinin
+509,"Bisphenol A bis(2,3-dihydroxypropyl) ether"
+510,Betaine aldehyde
+511,beta-Hydroxyisovaleric acid
+512,beta-Homoglutamine
+513,CAR 18:1
+514,Cysteinesulfinic acid
+515,Cysteine S-sulfate
+516,Cyclohexanamine
+517,Creatinine
+518,Creatine
+519,Corticosterone
+520,CMPF
+521,Citrulline
+522,Citraconic acid
+523,Cinnamic acid
+524,Chrysogine
+525,Cholic acid
+526,Cer 34:1;2O|Cer 18:1;2O/16:0
+527,Cholesterol
+528,Cer 46:0;2O|Cer 22:0;2O/24:0
+529,Cer 43:1;2O|Cer 19:1;2O/24:0
+530,Cer 43:1;2O|Cer 18:1;2O/25:0
+531,Cer 43:0;2O|Cer 20:0;2O/23:0
+532,Cer 42:2;2O|Cer 18:1;2O/24:1
+533,Cer 42:1;2O|Cer 18:1;2O/24:0
+534,Cer 42:0;2O|Cer 18:0;2O/24:0
+535,Cer 41:0;2O|Cer 18:0;2O/23:0
+536,Cer 40:2;2O|Cer 18:2;2O/22:0
+537,Cer 40:1;2O|Cer 18:1;2O/22:0
+538,Cer 40:0;2O|Cer 18:0;2O/22:0
+539,Cer 39:1;2O|Cer 17:1;2O/22:0
+540,Cholesterol 3-sulfate
+541,Abietic acid
+542,8-Hydroxyquinoline-2-carbaldehyde
+543,8-(3-Octyl-2-oxiranyl)octanoic acid
+544,"7-Nitro-2,1,3-benzoxadiazol-4-ylamine"
+545,6-Methyl-2-[(2-oxo-2-phenylethyl)sulfanyl]-4(3H)-pyrimidinone
+546,6-Hydroxycaproic acid
+547,5(Aminocarbonyl)amino]pentanoic acid
+548,5'-S-Methyl-5'-thioadenosine
+549,5-Methoxy-3-indoleacetic acid
+550,5-Hydroxyvalproic acid
+551,5-Hydroxytryptophan
+552,"5-Hydroxy-3,4-dihydro-2(1H)-quinolinone"
+553,Benzoylmalic acid
+554,5-Aminosalicylic acid
+555,5-alpha-Androstan-3-beta-ol-17-one sulfate
+556,"4,6-Dihydroxypyrimidine"
+557,"4,5,7-Trihydroxyisoflavone"
+558,4-Pyridoxic acid
+559,4-Methylumbelliferone
+560,4-Hydroxyvalproic acid
+561,4-Hydroxyphenyllactic acid
+562,4-Hydroxyhippuric acid
+563,4-Hydroxybenzaldehyde
+564,4-Hydroxy-6-methyl-2-pyrone
+565,4-Guanidinobutyric acid
+566,4-Amino-2-methylbenzamide
+567,5-Hydroxy-3-indoleacetic acid
+568,BA 24:1;O3;T
+569,Asp-Glu
+570,Asn-Ala
+571,Arginine
+572,Arg-Leu
+573,Arabitol
+574,Apigenin 7-glucuronide
+575,Anserine
+576,alpha.-Methylkynurenine
+577,Allantoin
+578,Alanine
+579,Ala-Leu-Ala-Leu
+580,Abscisic acid
+581,Ala-Glu
+582,Ala-Gln
+583,Ala-Asn
+584,Ala-Arg
+585,Adipic acid
+586,Adenosine
+587,Adenine
+588,Actrarit
+589,Acetylcarnitine
+590,Acetyl-carnitine
+591,Acetyl-beta-alanine
+592,Acetohydroxamic acid
+593,Acamprosate
+594,Ala-Ile
+595,TG 45:0|TG 14:0_15:0_16:0
+596,TG 43:2;1O|TG 10:0_16:0_17:2;1O
+597,Tetradecanedioic acid
+598,Tetrabutylammonium
+599,Tauroursodeoxycholic acid
+600,Taurodeoxycholic acid
+601,Taurocholic acid
+602,Taurine
+603,Sulfamethoxazole
+604,Suberic acid
+605,Stearamide
+606,ST 28:1;O;S
+607,Spermine
+608,N-(4-Methoxyphenyl)acetamide
+609,SM 42:3;2O|SM 14:1;2O/28:2
+610,SM 42:3;2O
+611,SM 42:2;2O|SM 19:1;2O/23:1
+612,SM 42:2;2O|SM 18:2;2O/24:0
+613,SM 42:2;2O|SM 18:1;2O/24:1
+614,SM 42:1;2O|SM 18:1;2O/24:0
+615,SM 42:1;2O
+616,SM 41:2;2O
+617,SM 40:2;2O|SM 18:2;2O/22:0
+618,SM 40:2;2O|SM 15:1;2O/25:1
+619,SM 40:2;2O
+620,SM 40:1;2O|SM 18:1;2O/22:0
+621,SM 39:1;2O
+622,SM 42:3;2O|SM 18:2;2O/24:1
+623,TG 52:8|TG 18:2_18:2_16:4
+624,TG 52:7|TG 18:2_18:2_16:3
+625,TG 52:7|TG 14:0_18:2_20:5
+626,TG 52:6|TG 16:1_18:2_18:3
+627,TG 52:6|TG 16:0_18:2_18:4
+628,TG 52:6|TG 14:0_16:0_22:6
+629,TG 52:5|TG 16:0_16:0_20:5
+630,TG 52:4|TG 16:0_18:2_18:2
+631,TG 52:4|TG 16:0_16:0_20:4
+632,TG 52:4;2O|TG 16:0_18:1_18:3;2O
+633,TG 52:4;1O|TG 16:0_18:2_18:2;1O
+634,TG 52:1|TG 16:0_18:0_18:1
+635,TG 51:5|TG 15:0_18:2_18:3
+636,TG 46:0|TG 14:0_15:0_17:0
+637,TG 51:3|TG 16:0_17:1_18:2
+638,TG 51:2|TG 16:0_17:1_18:1
+639,TG 51:1|TG 16:0_17:0_18:1
+640,TG 51:0|TG 16:0_17:0_18:0
+641,TG 50:6|TG 16:0_18:2_16:4
+642,TG 50:5|TG 16:0_18:2_16:3
+643,TG 50:5|TG 14:0_18:2_18:3
+644,TG 50:3|TG 16:0_16:1_18:2
+645,TG 50:1|TG 16:0_16:0_18:1
+646,TG 49:3|TG 15:0_16:1_18:2
+647,TG 49:2|TG 15:0_16:0_18:2
+648,TG 48:0|TG 16:0_16:0_16:0
+649,TG 46:2|TG 14:0_16:1_16:1
+650,TG 46:0|TG 14:0_16:0_16:0
+651,TG 51:4|TG 15:0_18:2_18:2
+652,Pyridoxal phosphate
+653,Pyridoxal
+654,Putrescine
+655,Psicose
+656,Prostaglandin A3
+657,Propionylcarnitine
+658,Propionic acid
+659,Prolylphenylalanine
+660,Prolylalanine
+661,Proline-hydroxyproline
+662,Proline
+663,Pro-Gly
+664,Pro-Gln
+665,SM 38:2;2O|SM 18:2;2O/20:0
+666,PI 40:6|PI 18:0_22:6
+667,PI 40:6
+668,PI 39:4|PI 19:0_20:4
+669,PI 38:6|PI 16:0_22:6
+670,PI 38:4|PI 18:0_20:4
+671,PI 38:4;O|PI 18:0_20:4;O
+672,PI 37:4|PI 17:0_20:4
+673,PI 36:5|PI 16:0_20:5
+674,PI 36:4|PI 16:0_20:4_b
+675,PI 36:4
+676,PI 36:3|PI 18:1_18:2
+677,PI 36:3|PI 16:0_20:3
+678,PI 36:3
+679,Picolinuric acid
+680,SM 38:1;2O
+681,SM 36:2;2O|SM 19:1;2O/17:1
+682,SM 36:2;2O|SM 18:2;2O/18:0
+683,SM 36:1;2O|SM 18:1;2O/18:0
+684,SM 35:2;3O
+685,SM 34:2;2O|SM 18:2;2O/16:0
+686,SM 34:1;3O
+687,SM 34:1;2O|SM 18:1;2O/16:0
+688,SM 33:1;2O|SM 17:1;2O/16:0
+689,SM 33:1;2O
+690,SM 32:1;2O|SM 18:1;2O/14:0
+691,SM 32:1;2O|SM 16:1;2O/16:0
+692,SM 32:1;2O
+693,Pyroglutamic acid
+694,Serotonin
+695,Serine
+696,Ser-His
+697,Sebacic acid
+698,SE 29:1/20:4
+699,SE 29:1/18:2
+700,Sarcosine
+701,Salicylic alcohol
+702,saccharic acid
+703,S-Adenosyl-homocysteine
+704,Ribulofuranose
+705,Ribose
+706,Riboflavin
+707,Resveratrol-3-O-sulfate
+708,SL 33:0;0O
+709,TG O-52:1|TG O-18:0_16:0_18:1
+710,TG O-51:0|TG O-17:0_16:0_18:0
+711,TG O-50:3|TG O-16:0_16:0_18:3
+712,TG O-50:2|TG O-16:0_16:0_18:2
+713,TG O-50:1|TG O-16:0_16:0_18:1
+714,TG O-48:0|TG O-17:0_15:0_16:0
+715,TG 66:3|TG 16:0_32:1_18:2
+716,TG 64:17|TG 20:5_22:6_22:6
+717,TG 64:13|TG 18:1_22:6_24:6
+718,TG 62:9|TG 22:1_18:2_22:6
+719,TG 62:4|TG 20:1_24:1_18:2
+720,TG 62:3|TG 26:0_18:1_18:2
+721,TG 62:13|TG 18:1_22:6_22:6
+722,TG 53:1|TG 16:0_19:0_18:1
+723,TG 61:3|TG 25:0_18:1_18:2
+724,TG 61:13|TG 18:2_21:5_22:6
+725,TG 60:9|TG 20:1_18:2_22:6
+726,TG 60:9|TG 18:1_18:2_24:6
+727,TG 60:8|TG 18:1_20:1_22:6
+728,TG 60:7|TG 18:1_20:1_22:5
+729,TG 60:5|TG 24:1_18:2_18:2
+730,TG 60:4|TG 18:1_24:1_18:2
+731,TG 60:3|TG 24:0_18:1_18:2
+732,TG 60:2|TG 18:0_24:0_18:2
+733,TG 60:14|TG 18:3_20:5_22:6
+734,TG 60:13|TG 18:2_20:5_22:6
+735,TG 60:11|TG 18:1_20:4_22:6
+736,TG 62:12|TG 18:1_22:5_22:6
+737,Val-Gln
+738,Urocanic acid
+739,Uridine
+740,Uracil
+741,Undecanedioic acid
+742,Tuberonic acid glucoside
+743,Tuberonic acid
+744,Triphenyl phosphate
+745,Triethanolamine
+746,Tri-2-ethylhexyl trimellitate
+747,TMAO
+748,Thymidine
+749,TG O-53:6|TG O-15:0_19:3_19:3
+750,TG O-52:2|TG O-18:0_16:0_18:2
+751,TG O-60:7|TG O-20:0_18:1_22:6
+752,10.87_603.53
+753,10.42_369.35
+754,5.10_807.57
+755,5.10_807.07
+756,4.94_805.56
+757,7.125_186.1124
+758,1-O-Hexadecyl-2-O-acetyl-sn-glyceryl-3-phosphorylcholine
+759,1-Methylnicotinamide
+760,Valine
+761,1-Hexadecylpyridinium
+762,1-Deoxynojirimycin
+763,Xanthosine
+764,TG O-52:3|TG O-16:0_18:1_18:2
+765,1-Methyl-L-histidine
+766,TG 56:5|TG 18:0_18:1_20:4
+767,TG 56:5|TG 16:0_18:1_22:4
+768,TG 56:4|TG 18:1_20:1_18:2
+769,TG 56:2|TG 16:0_18:1_22:1
+770,TG 56:1|TG 16:0_22:0_18:1
+771,TG 56:0|TG 16:0_18:0_22:0
+772,TG 55:8|TG 15:0_18:2_22:6
+773,TG 55:7|TG 16:0_18:2_21:5
+774,TG 55:6|TG 16:0_18:1_21:5
+775,TG 55:5|TG 19:1_18:2_18:2
+776,TG 55:3|TG 19:0_18:1_18:2
+777,TG 55:2|TG 16:0_21:0_18:2
+778,TG 54:9|TG 18:2_18:3_18:4
+779,TG 60:10|TG 18:1_20:3_22:6
+780,TG 54:5|TG 18:1_18:2_18:2
+781,TG 54:3|TG 18:1_18:1_18:1
+782,TG 54:2|TG 18:0_18:1_18:1
+783,TG 54:2|TG 16:0_18:1_20:1
+784,TG 54:0|TG 18:0_18:0_18:0
+785,TG 54:0|TG 16:0_18:0_20:0
+786,TG 53:6|TG 17:1_18:2_18:3
+787,TG 53:5|TG 17:1_18:2_18:2
+788,TG 53:4|TG 17:1_18:1_18:2
+789,TG 53:4|TG 17:0_18:2_18:2
+790,TG 53:3|TG 17:0_18:1_18:2
+791,TG 53:3|TG 17:0_17:1_19:2
+792,TG 53:2|TG 16:0_18:1_19:1
+793,TG 54:7|TG 18:2_18:2_18:3
+794,TG 60:10|TG 18:0_20:4_22:6
+795,TG 60:10 b
+796,TG 60:1|TG 16:0_26:0_18:1
+797,TG 59:4|TG 23:0_18:2_18:2
+798,TG 59:2|TG 16:0_25:0_18:2
+799,TG 59:11|TG 16:0_21:5_22:6
+800,TG 59:1|TG 16:0_25:0_18:1
+801,TG 58:8|TG 18:1_18:2_22:5
+802,TG 58:8|TG 18:1_18:1_22:6
+803,TG 58:7|TG 18:1_18:2_22:4
+804,TG 58:7|TG 18:0_18:1_22:6
+805,TG 58:6|TG 18:1_20:1_20:4
+806,TG 58:6|TG 18:0_18:1_22:5
+807,TG 56:5|TG 20:1_18:2_18:2
+808,TG 58:2|TG 22:0_18:1_18:1
+809,TG 58:2|TG 16:0_18:1_24:1
+810,TG 58:12|TG 18:2_20:5_20:5
+811,TG 58:10|TG 18:2_18:2_22:6
+812,TG 58:1|TG 16:0_24:0_18:1
+813,TG 58:0|TG 16:0_18:0_24:0
+814,TG 57:9|TG 17:1_18:2_22:6
+815,TG 57:8|TG 18:1_18:2_21:5
+816,TG 57:8|TG 17:1_18:1_22:6
+817,TG 57:4|TG 21:0_18:2_18:2
+818,TG 57:3|TG 21:0_18:1_18:2
+819,TG 57:2|TG 16:0_23:0_18:2
+820,TG 57:1|TG 16:0_23:0_18:1
+821,TG 56:8|TG 16:0_18:2_22:6
+822,TG 58:3|TG 22:0_18:1_18:2
+823,N-Methylvaline
+824,N-Methylproline
+825,N-Methylglutamic acid
+826,N-Methylalanine
+827,N-Methyl-L-asparagine
+828,N-Isovalerylglycine
+829,N-Isobutyrylglycine
+830,N-Glycolylneuraminic acid
+831,N-Formylmethionine
+832,N-epsilon-Acetyllysine
+833,N-Cinnamoylglycine
+834,N-Carbobenzyloxyleucine
+835,N-alpha-methylhistamine
+836,PI 36:2|PI 18:0_18:2_a
+837,N-Acetylphenylalanine
+838,N-acetylornithine
+839,N-Acetylneuraminic acid
+840,N-Acetylmethionine
+841,N-Acetyllysine
+842,N-Acetylleucine
+843,N-Acetylhistidine
+844,N-Acetylglycine
+845,N-Acetylcytidine
+846,N-Acetylcysteine
+847,N-Acetylalanine
+848,N-Acetyl-valine
+849,N-Acetyl-epsilon-caprolactam
+850,N-acetyltryptophan
+851,Oleoyl ethylamide
+852,Octanoylcarnitine
+853,Octadecanedioic acid
+854,O4_FA 20:4; (arachidonic acid)
+855,O3_PC 35:2
+856,O2_PE 38:2 isomer b
+857,O2_PE 38:2
+858,O2_FA 24:1; (nervonic acid)
+859,O2_FA 22:1; (erucic acid) [M-H]-
+860,O2_FA 20:2; (eicosadienoic acid)
+861,O2_FA 20:1; (eicosenoic acid)
+862,O1_PC p-38:4; or PC o-38:5; B
+863,O1_PC p-36:4; or PC o-36:5
+864,N-Tigloylglycine
+865,O1_FA 22:6; (docosahexaenoic acid)
+866,O1_FA 20:5; (eicosapentaenoic acid)
+867,O1_FA 20:4; (arachidonic acid)
+868,O1_FA 18:3; (linolenic acid)
+869,o-Hydroxyhippuric acid
+870,Normetanephrine
+871,Norleucine
+872,Naringenin-4'-O-.beta.-D-glucuronide
+873,NAE 14:0
+874,N8-Acetylspermidine
+875,"N1-(3-Aminopropyl)-N1-methylpropane-1,3-diamine"
+876,"N,N-Dimethylformamide"
+877,"N,N-Dimethyldodecylamine N-oxide"
+878,"N,N-Bis(2-hydroxyethyl)dodecanamide"
+879,O1_PC 36:4; A
+880,LPC 24:1/0:0
+881,LPC 24:0/0:0
+882,LPC 23:0/0:0
+883,LPC 22:6/0:0
+884,LPC 22:5 b
+885,LPC 22:5 a
+886,LPC 22:4/0:0
+887,LPC 22:1/0:0
+888,LPC 22:0/0:0
+889,LPC 20:5/0:0
+890,LPC 20:4/0:0
+891,LPC 20:3/0:0
+892,LPC 20:2/0:0
+893,N-Acetyl-D-glucosamine
+894,LPC 19:1/0:0
+895,LPC 18:3/0:0
+896,LPC 18:2/0:0
+897,LPC 18:1
+898,LPC 18:0
+899,LPC 17:1/0:0
+900,LPC 16:0/0:0
+901,LPC 15:0/0:0
+902,Liquiritigenin
+903,Linoleic acid
+904,Lauroyl-L-carnitine
+905,Lactobionic acid
+906,Lactitol
+907,LPC 20:1/0:0
+908,Val-Gly
+909,N-(4-Hydroxy-3-methylphenyl)acetamide
+910,N-(2-Furoyl)glycine
+911,Myristoyl-L-carnitine
+912,Methylacetate
+913,Methyl 4-hydroxycinnamate
+914,Methioninesulfoxide
+915,methionine
+916,Mannitol
+917,Malonyl-L-carnitine
+918,Malonic acid
+919,Maleic acid
+920,m-Toluthioamide
+921,LPC O-16:0
+922,Lys-Ile
+923,Lys-Ala
+924,LPI 20:4
+925,LPI 18:0
+926,LPE O-18:2
+927,LPE 22:6
+928,LPE 20:4
+929,LPE 18:2
+930,LPE 18:1
+931,LPE 18:0
+932,LPE 16:0
+933,LPC O-20:0
+934,LPC O-18:0
+935,LPC O-16:1
+936,Lys-Leu
+937,PE 34:2
+938,PE 34:1|PE 16:0_18:1
+939,PC O-42:7
+940,PC O-42:6
+941,PC O-41:11
+942,PC O-41:10
+943,PC O-40:8
+944,PC O-40:4
+945,PC O-39:10
+946,PC O-38:7
+947,PC O-38:6
+948,PC O-38:5|PC O-18:1_20:4
+949,PC O-38:4
+950,Oroxyloside
+951,PC O-37:8
+952,PC O-37:5
+953,PC O-36:6
+954,PC O-36:5|PC O-16:1_20:4
+955,PC O-36:5
+956,PC O-36:4|PC O-16:0_20:4
+957,PC O-36:4
+958,PC O-36:3
+959,PC O-36:2
+960,PC O-36:1
+961,PC O-34:4
+962,PC O-34:3|PC O-16:1_18:2
+963,PC O-34:2
+964,PC O-38:2
+965,PI 36:1|PI 18:0_18:1_b
+966,phosphoethanolamine
+967,Phosphocholine
+968,Phenylpyruvic acid
+969,"Phenylalanine, methyl ester"
+970,Phenylacetaldehyde
+971,Phe-Leu
+972,Pencolide
+973,PE P-42:6|PE P-20:0_22:6
+974,PE P-36:4|PE P-16:0_20:4
+975,PE O-42:7|PE O-20:1_22:6
+976,PE O-40:6|PE O-18:0_22:6
+977,PE O-40:5|PE O-18:0_22:5
+978,PE 34:2|PE 16:0_18:2
+979,PE O-38:7|PE O-16:1_22:6
+980,PE O-38:6|PE O-18:2_20:4
+981,PE O-38:5|PE O-18:1_20:4
+982,PE O-38:4|PE O-18:0_20:4
+983,PE O-37:4|PE O-21:3_16:1
+984,PE O-36:5|PE O-16:1_20:4
+985,PE O-36:3|PE O-18:1_18:2
+986,PE O-36:2|PE O-18:0_18:2
+987,PE O-34:3|PE O-16:1_18:2
+988,PE 40:6|PE 18:0_22:6
+989,PE 38:6|PE 16:0_22:6
+990,PE 38:5|PE 18:1_20:4
+991,PE 38:4|PE 18:0_20:4
+992,PE 36:4|PE 16:0_20:4
+993,PE O-40:4|PE O-20:0_20:4
+994,PC 36:5|PC 16:0_20:5
+995,PC 36:4|PC 18:2_18:2
+996,PC 36:4|PC 16:0_20:4
+997,PC 36:4;O|PC 16:0_20:4;O
+998,PC 36:4;3O|PC 18:2_18:2;3O
+999,PC 36:3|PC 18:1_18:2
+1000,PC 36:3|PC 16:0_20:3
+1001,PC 36:2|PC 18:1_18:1
+1002,PC 36:2;O|PC 18:0_18:2;O
+1003,PC 36:1|PC 18:0_18:1
+1004,PC 36:0
+1005,PC 35:5|PC 15:1_20:4
+1006,PC 35:5
+1007,PC O-34:1
+1008,PC 35:1|PC 17:0_18:1
+1009,PC 34:3|PC 16:1_18:2
+1010,PC 34:2|PC 16:0_18:2
+1011,PC 34:1|PC 16:0_18:1
+1012,PC 34:0
+1013,PC 33:2
+1014,PC 33:1|PC 16:0_17:1
+1015,PC 32:2
+1016,PC 32:0|PC 16:0_16:0
+1017,Pantothenic acid
+1018,Palmitoylcarnitine
+1019,Palmitoyl sphingomyelin
+1020,P-Toluenesulfonic acid
+1021,P-Coumaric acid
+1022,PC 35:2|PC 17:0_18:2
+1023,PC O-33:2
+1024,PC O-32:2
+1025,PC O-32:1;1O|PC O-17:0_15:1;1O
+1026,PC O-31:7
+1027,PC 42:7
+1028,PC 42:2
+1029,PC 42:10|PC 21:5_21:5
+1030,PC 41:6
+1031,PC 40:8|PC 18:2_22:6
+1032,PC 40:7|PC 18:1_22:6
+1033,PC 40:5|PC 18:0_22:5
+1034,PC 40:4|PC 20:0_20:4
+1035,PC 39:6|PC 17:0_22:6
+1036,PC 37:2
+1037,PC 38:6|PC 18:2_20:4
+1038,PC 38:6|PC 16:0_22:6
+1039,PC 38:6
+1040,PC 38:5|PC 18:1_20:4
+1041,PC 38:5|PC 16:0_22:5
+1042,PC 38:4|PC 18:1_20:3
+1043,PC 38:4|PC 18:0_20:4
+1044,PC 38:3|PC 18:0_20:3
+1045,PC 38:2|PC 20:0_18:2
+1046,PC 38:2
+1047,PC 37:6|PC 15:0_22:6
+1048,PC 37:5|PC 17:0_20:5
+1049,PC 37:5;O|PC 20:4_17:1;O
+1050,PC 37:2|PC 19:0_18:2
+1051,PC 39:4|PC 19:0_20:4
