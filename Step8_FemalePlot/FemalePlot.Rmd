@@ -1,0 +1,55 @@
+1.29.25 Female welches ttest w equal var using 20 iterations . This is pretty close to what it was before! Just a teensy bit worse
+```{r}
+source("FemalePlotFuncs.R")
+
+# Example usage
+#df <- read.xlsx("../Step7_FemalePredsMaleModel/")
+
+results <- process_and_visualize_loo_results(
+  all_loo_predictions_file = "/home/brettonb/Aged Mouse Project 1/Python/012825_Predictions_on_Females_Median_of_20Iterations.xlsx",
+  output_prefix = "../Paper_Figures/female_20_wleches_t_test_iterations"
+)
+
+print(results$combined_graph)
+
+significant_results <- results$t_test_results %>%
+  filter(p_value < 0.05) %>%
+  arrange(Dataset, p_value)
+print("Significant results (p < 0.05):")
+print(significant_results)
+
+
+results_plot_data <- read.xlsx("plot_data_new.xlsx")
+head(results_plot_data)
+
+
+
+```
+
+Save text files with dependencies and version
+```{r}
+
+# Get the R version
+r_version <- R.version.string
+
+# Get the list of loaded packages and their versions
+loaded_packages <- sessionInfo()$otherPkgs
+package_info <- data.frame(
+  Package = names(loaded_packages),
+  Version = sapply(loaded_packages, function(pkg) pkg$Version),
+  stringsAsFactors = FALSE
+)
+
+# Define the output file
+output_file <- "../Paper_Figures/Package_Info/Step8_R_session_and_packgage_version_info.txt"
+
+# Write the R version to the file
+writeLines(paste("R Version:", r_version), output_file)
+
+# Write the package information
+write.table(package_info, file = output_file, append = TRUE, row.names = FALSE, sep = "\t", quote = FALSE)
+
+cat("Session info written to", output_file, "\n")
+
+
+```

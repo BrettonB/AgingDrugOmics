@@ -1,0 +1,186 @@
+---
+title: "ShapPlot"
+output: html_document
+date: "2025-01-27"
+---
+
+```{r setup, include=FALSE}
+#Add all the required files. There are 2-3, listed below. 
+knitr::opts_chunk$set(echo = TRUE)
+```
+this calculates fold changes for FM
+```{r}
+# Load required libraries
+library(dplyr)
+library(openxlsx)
+library(ggplot2)
+library(tidyr)
+library(scales)
+source("ShapPlotFuncs.R")
+
+# Define file path for SHAP importance
+shap_file_path <- "../Step3_GenerateSHAPPredictions/ShapOutput/SHAP_Default_Feature_Order_FM.csv"
+FM_dataset <- read.csv("../Step1_LoadingAndCleaningData/FM.csv")
+
+# Standardize column names to ensure consistency
+colnames(FM_dataset) <- make.names(colnames(FM_dataset))
+print("Dataset column names:")
+print(colnames(FM_dataset))
+
+# Load SHAP top 20 metabolites instead of training a new model
+FM_shap_results <- perform_xgboost_shap_analysis(FM_dataset, "FM", selected_groups, shap_file_path, top_n = 20)
+
+# Save SHAP-selected results
+write.xlsx(FM_shap_results, "FM_XGBOOST_Top_20_Metabolites.xlsx")
+
+# Run analysis with XGBoost metabolites
+results_shap <- analyze_metabolites_shap(FM_dataset, FM_shap_results)
+
+# Save fold changes
+write.xlsx(results_shap$fold_changes, "FM_fold_changes_20_XGBOOST.xlsx")
+
+
+
+```
+
+Run this to generate the sparkplot fold change
+```{r}
+# Load required libraries
+library(dplyr)
+library(openxlsx)
+library(ggplot2)
+library(tidyr)
+library(scales)
+
+# Define file paths
+shap_file_path <- "FM_XGBOOST_Top20_Metabolites.xlsx"
+fold_change_file <- "FM_fold_changes_XGBOOST.xlsx"
+
+# Load SHAP top 20 metabolites
+if (file.exists(shap_file_path)) {
+  shap_importance <- read.xlsx(shap_file_path) %>%
+    rename(Metabolite = Metabolite) %>%
+    mutate(Metabolite = gsub(" ", ".", Metabolite)) %>%
+    mutate(Rank = row_number())  # Rank metabolites
+} else {
+  stop(paste("Error: File not found -", shap_file_path))
+}
+
+# Load fold change data
+if (file.exists(fold_change_file)) {
+  FM_fold_changes <- read.xlsx(fold_change_file)
+} else {
+  stop(paste("Error: File not found -", fold_change_file))
+}
+
+# Ensure metabolite names match
+colnames(FM_fold_changes) <- gsub(" ", ".", colnames(FM_fold_changes))
+
+# Merge SHAP importance with fold changes
+subset_data <- shap_importance %>%
+  left_join(FM_fold_changes, by = "Metabolite") 
+
+# **Fix: Compute Log2 Fold Change**
+subset_data <- subset_data %>%
+  mutate(Log2FoldChange = log2(FoldChange))  # Apply log2 transformation
+
+# Define **custom order and colors** for each treatment group
+custom_colors <- c(
+  "M_Cont_12" = "black",
+  "M_17aE2"   = "blue",
+  "M_Cana"    = "green",
+  "M_Aca"     = "red",
+  "M_Rapa"    = "purple",
+  "M_CR"      = "orange"
+)
+
+# Ensure Grp_Sex follows this custom order
+subset_data$Grp_Sex <- factor(subset_data$Grp_Sex, levels = names(custom_colors))
+
+# **Sort Rank in custom order**
+subset_data <- subset_data %>%
+  arrange(factor(Grp_Sex, levels = names(custom_colors)))
+
+# Calculate the overall min and max for y-axis limits
+y_min_rounded <- -2.1
+y_max_rounded <- 3.8
+
+# **🔹 Create the ordered bar plot**
+p <- ggplot(subset_data, aes(x = Grp_Sex, y = Log2FoldChange, fill = Grp_Sex)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ Rank, scales = "free_y", ncol = 4) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.title.x = element_blank(),
+    strip.text = element_text(size = 12),
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.spacing = unit(0.5, "lines"),
+    panel.border = element_rect(color = "grey", fill = NA, size = 0.5)
+  ) +
+  labs(title = "Log2 Fold Changes for Top 20 SHAP-Ranked Metabolites",
+       y = paste("Log2 Fold Change (compared to", unique(subset_data$Grp_Sex)[1], ")")) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  scale_y_continuous(
+    limits = c(y_min_rounded, y_max_rounded),
+    breaks = c(y_min_rounded, 0, y_max_rounded),  # **Only three labels**
+    labels = function(x) format(x, nsmall = 1)  
+  ) +
+  coord_cartesian(ylim = c(y_min_rounded, y_max_rounded)) +
+  scale_fill_manual(values = custom_colors)  # **Apply custom colors in correct order**
+
+# **Save the plot**
+ggsave("top_20_XGBOOST_shap_vals_FM_metabolites_log2_fold_changes_ordered.pdf", 
+       p, width = 15, height = 12, dpi = 1200)
+ggsave("../Paper_Figures/sparkplot_top_20_XGBOOST_shap_vals_FM_metabolites_log2_fold_changes_ordered.pdf", 
+       p, width = 15, height = 12, dpi = 1200)
+
+# **Save key for reference**
+key <- subset_data %>%
+  select(Metabolite, Rank) %>%
+  unique()
+write.xlsx(key, "sparkplot_FM_xgboost_Key_ordered.xlsx")
+write.xlsx(key, "../Paper_Figures/sparkplot_FM_xgboost_Key_ordered.xlsx")
+
+# **Display the plot**
+print(p)
+
+
+#Save to paper folder
+
+
+
+```
+
+
+-----------
+
+Save text files with dependencies and version
+```{r}
+
+# Get the R version
+r_version <- R.version.string
+
+# Get the list of loaded packages and their versions
+loaded_packages <- sessionInfo()$otherPkgs
+package_info <- data.frame(
+  Package = names(loaded_packages),
+  Version = sapply(loaded_packages, function(pkg) pkg$Version),
+  stringsAsFactors = FALSE
+)
+
+# Define the output file
+output_file <- "../Paper_Figures/Package_Info/Step11_R_session_and_packgage_version_info.txt"
+
+# Write the R version to the file
+writeLines(paste("R Version:", r_version), output_file)
+
+# Write the package information
+write.table(package_info, file = output_file, append = TRUE, row.names = FALSE, sep = "\t", quote = FALSE)
+
+cat("Session info written to", output_file, "\n")
+
+
+```

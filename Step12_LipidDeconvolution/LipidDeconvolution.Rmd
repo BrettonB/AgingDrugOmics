@@ -1,0 +1,106 @@
+---
+title: "LipidDeconvolution"
+output: html_document
+date: "2025-01-27"
+---
+
+```{r setup, include=FALSE}
+##Add the files PLS
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+load these
+````{r}
+library(tidyverse)
+library(readxl)
+library(writexl)
+
+# Improved deconvolution function
+library(stringr)
+library(tibble)
+source("LipidDeconvolutionFuncs.R")
+````
+Deconvolution
+````{r}
+# Improved deconvolution function
+library(stringr)
+library(tibble)
+source("LipidDeconvolutionFuncs.R")
+# Load the data
+ChemID_data <- read_excel("../Step1_LoadingAndCleaningData/ChemID.xlsx")  # Replace with your actual file name
+
+# Filter for Triradylglycerols
+names_of_non_lipids <- ChemID_data %>%
+  filter(`Super class` == "Triradylcglycerols") %>%
+  select(`Super class`, `metabolite name`) %>%
+  rename(Metabolite = `metabolite name`)
+
+# Apply the deconvolution function to all metabolites
+lipid_deconvolution_key <- names_of_non_lipids %>%
+  mutate(deconvoluted = map(Metabolite, deconvolute_tg)) %>%
+  unnest(deconvoluted, names_sep = "_")
+
+# View the results
+print(head(lipid_deconvolution_key))
+
+# Save the results
+write_xlsx(lipid_deconvolution_key, "lipid_deconvolution_key_improved.xlsx")
+
+FM_XGboost_Pval_data <- read_csv("../Step3_GenerateSHAPPredictions/ShapOutput/SHAP_Default_Feature_Order_FM.csv")%>%
+  rename(Metabolite = "Feature")
+
+top_metabs_lipid_analysis <- FM_XGboost_Pval_data %>% #replace FM_Gini_Pval_data with whatever you want to see the lipids of
+  inner_join(lipid_deconvolution_key, by = "Metabolite")
+
+write_xlsx(top_metabs_lipid_analysis, "XGBoost_lipid_deconvolution_regression.xlsx")
+
+```
+
+quick analysis on TG abundance in FM
+```{r}
+FM_total <- read_csv("../Step1_LoadingAndCleaningData/FM.csv")
+dim(FM_total) #there are 6 non-metabolite columns to be subtracted
+
+total_metabs <- ncol(FM_total) - 6
+
+FM_TGs <- FM_total %>%
+  select(starts_with("TG"))
+dim(FM_TGs)
+
+total_TGs <- ncol(FM_TGs)
+
+TG_div_Total <- total_TGs/total_metabs*100
+TG_div_Total
+
+#16.18% of all metabolites in FM are TGs, yet 8/20 40% are in the top 20 metabolites by SHAP importance
+
+```
+
+Save text files with dependencies and version
+```{r}
+
+# Get the R version
+r_version <- R.version.string
+
+# Get the list of loaded packages and their versions
+loaded_packages <- sessionInfo()$otherPkgs
+package_info <- data.frame(
+  Package = names(loaded_packages),
+  Version = sapply(loaded_packages, function(pkg) pkg$Version),
+  stringsAsFactors = FALSE
+)
+
+# Define the output file
+output_file <- "../Paper_Figures/Package_Info/Step12_R_session_and_packgage_version_info.txt"
+
+# Write the R version to the file
+writeLines(paste("R Version:", r_version), output_file)
+
+# Write the package information
+write.table(package_info, file = output_file, append = TRUE, row.names = FALSE, sep = "\t", quote = FALSE)
+
+cat("Session info written to", output_file, "\n")
+
+
+```

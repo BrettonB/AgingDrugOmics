@@ -1,0 +1,56 @@
+This code will plot the GHRKO plot from the data in step 9 (Python)
+It will export the graph to Paper_Figures
+```{r}
+source("GHRKOPlotFuncs.R")
+# Example usage
+results <- process_and_visualize_loo_results(
+  all_loo_predictions_file = "../Step9_GHRKOPreds/012625_Predictions_on_GHRKO_SD_Median_of_20Iterations.xlsx",
+  output_prefix = "../Paper_Figures/GHRKO_SnellDwarf_20iterations_Welch"
+)
+
+print(results$combined_graph)
+
+# Show any significant results
+significant_results <- results$t_test_results %>%
+  filter(p_value < 0.05) %>%
+  arrange(Dataset, p_value)
+print("Significant results (p < 0.05):")
+print(significant_results)
+
+# Check the t-test results
+#results_check <- read.xlsx("012725_GHRKO_SD_20iterations_Welch_t_test_results.xlsx")
+#head(results_check)
+
+#results_plot_data <- read.xlsx("plot_data_new.xlsx")
+#write.xlsx(results_plot_data, "GHRKO_SD_Plot_Data.xlsx")
+
+head(results_plot_data)
+```
+
+Save text files with dependencies and version
+```{r}
+
+# Get the R version
+r_version <- R.version.string
+
+# Get the list of loaded packages and their versions
+loaded_packages <- sessionInfo()$otherPkgs
+package_info <- data.frame(
+  Package = names(loaded_packages),
+  Version = sapply(loaded_packages, function(pkg) pkg$Version),
+  stringsAsFactors = FALSE
+)
+
+# Define the output file
+output_file <- "../Paper_Figures/Package_Info/Step10_R_session_and_packgage_version_info.txt"
+
+# Write the R version to the file
+writeLines(paste("R Version:", r_version), output_file)
+
+# Write the package information
+write.table(package_info, file = output_file, append = TRUE, row.names = FALSE, sep = "\t", quote = FALSE)
+
+cat("Session info written to", output_file, "\n")
+
+
+```

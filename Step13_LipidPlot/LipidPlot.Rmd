@@ -1,0 +1,404 @@
+---
+title: "LipidPlot"
+output: html_document
+date: "2025-01-27"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+libaries
+```{r}
+library(openxlsx)
+library(ggplot2)
+library(dplyr)
+```
+
+Clean and import the data
+```{r}
+# Load required libraries
+library(dplyr)
+library(openxlsx)
+library(ggplot2)
+library(tidyr)
+library(scales)
+
+# Read data
+Top_Shap_lipids <- read.xlsx("../Step12_LipidDeconvolution/XGBoost_lipid_deconvolution_regression.xlsx")
+Top_Shap_lipids_TG <- Top_Shap_lipids %>%
+  filter(startsWith(Metabolite, "TG"))
+Fold_Change <- read.xlsx("../Step11_ShapPlot/FM_fold_changes_1400_XGBOOST.xlsx") %>%
+  filter(startsWith(Metabolite, "TG"))
+
+library(dplyr)
+library(stringr)
+
+# Function to standardize metabolite names across both datasets
+library(dplyr)
+library(stringr)
+
+# Function to standardize metabolite names consistently
+library(dplyr)
+library(stringr)
+
+# Function to standardize metabolite names consistently
+standardize_metabolite_names <- function(metabolite) {
+  metabolite <- str_trim(metabolite)          # Remove leading/trailing spaces
+  metabolite <- str_replace_all(metabolite, "[:space:]+", "")  # Remove all spaces
+  metabolite <- str_replace_all(metabolite, "\\|", ".")  # Convert "|" to "."
+  metabolite <- str_replace_all(metabolite, "/", "_")  # Convert "/" to "_"
+  metabolite <- str_replace_all(metabolite, ":", ".")  # Convert ":" to "."
+  metabolite <- str_replace_all(metabolite, "-", ".")  # Convert "-" to "."
+
+  # Ensure "TG" is followed by a dot (if missing)
+  metabolite <- str_replace_all(metabolite, "(TG)([0-9])", "\\1.\\2")
+
+  # Fix TGO -> TG.O to match formatting in Top_Shap_lipids
+  metabolite <- str_replace_all(metabolite, "\\bTGO\\b", "TG.O") 
+
+  return(metabolite)
+}
+
+# Apply function to standardize names in both datasets
+Fold_Change <- Fold_Change %>%
+  mutate(Metabolite = standardize_metabolite_names(Metabolite))
+
+Top_Shap_lipids <- Top_Shap_lipids %>%
+  mutate(Metabolite = standardize_metabolite_names(Metabolite))
+
+# Check how many now match
+num_matching <- sum(Fold_Change$Metabolite %in% Top_Shap_lipids$Metabolite)
+print(paste("Number of matching metabolites:", num_matching))
+
+# View unmatched metabolites (debugging)
+unmatched <- Fold_Change %>%
+  filter(!(Metabolite %in% Top_Shap_lipids$Metabolite))
+
+print("Unmatched metabolites in Fold_Change:")
+print(unique(unmatched$Metabolite))
+
+unmatched_shap <- Top_Shap_lipids %>%
+  filter(!(Metabolite %in% Fold_Change$Metabolite))
+
+print("Unmatched metabolites in Top_Shap_lipids:")
+print(unique(unmatched_shap$Metabolite))
+
+
+# Apply function to standardize names in both datasets
+Fold_Change <- Fold_Change %>%
+  mutate(Metabolite = standardize_metabolite_names(Metabolite))
+
+Top_Shap_lipids <- Top_Shap_lipids %>%
+  mutate(Metabolite = standardize_metabolite_names(Metabolite))
+
+# Check how many now match
+num_matching <- sum(Fold_Change$Metabolite %in% Top_Shap_lipids$Metabolite)
+print(paste("Number of matching metabolites:", num_matching))
+
+# View unmatched metabolites (debugging)
+unmatched <- Fold_Change %>%
+  filter(!(Metabolite %in% Top_Shap_lipids$Metabolite))
+
+print("Unmatched metabolites in Fold_Change:")
+print(unique(unmatched$Metabolite))
+
+unmatched_shap <- Top_Shap_lipids %>%
+  filter(!(Metabolite %in% Fold_Change$Metabolite))
+
+print("Unmatched metabolites in Top_Shap_lipids:")
+print(unique(unmatched_shap$Metabolite))
+
+
+# Apply function to standardize names in both datasets
+Fold_Change <- Fold_Change %>%
+  mutate(Metabolite = standardize_metabolite_names(Metabolite))
+
+Top_Shap_lipids <- Top_Shap_lipids %>%
+  mutate(Metabolite = standardize_metabolite_names(Metabolite))
+
+# Check how many now match
+num_matching <- sum(Fold_Change$Metabolite %in% Top_Shap_lipids$Metabolite)
+print(paste("Number of matching metabolites:", num_matching))
+
+# View unmatched metabolites (debugging)
+unmatched <- Fold_Change %>%
+  filter(!(Metabolite %in% Top_Shap_lipids$Metabolite))
+
+print("Unmatched metabolites in Fold_Change:")
+print(unique(unmatched$Metabolite))
+
+unmatched_shap <- Top_Shap_lipids %>%
+  filter(!(Metabolite %in% Fold_Change$Metabolite))
+
+print("Unmatched metabolites in Top_Shap_lipids:")
+print(unique(unmatched_shap$Metabolite))
+
+
+
+# Merge Fold_Change with Top_Shap_lipids on standardized Metabolite names
+merged_data <- Top_Shap_lipids %>%
+  inner_join(Fold_Change, by = "Metabolite")
+
+# Check number of matched metabolites
+print(dim(merged_data))
+
+# Save the merged data for verification
+#write.xlsx(merged_data, "Merged_Top_Shap_Lipids_FoldChange.xlsx")
+
+######3
+
+# Clean column names to ensure consistency
+colnames(Top_Shap_lipids) <- make.names(colnames(Top_Shap_lipids))
+colnames(Fold_Change) <- make.names(colnames(Fold_Change))
+
+# Merge datasets on 'Metabolite'
+merged_data <- Top_Shap_lipids %>%
+  inner_join(Fold_Change, by = "Metabolite") %>%
+  filter(!is.na(deconvoluted_Total_C_Num)) %>%
+  mutate(
+    deconvoluted_Total_C_Num = as.numeric(deconvoluted_Total_C_Num),
+    deconvoluted_Saturation_Number = as.numeric(deconvoluted_Saturation_Number),
+    FoldChange = log2(FoldChange)  # Convert to Log2 Fold Change
+  )
+
+# Subset Top 20
+top_20_lipids <- merged_data %>%
+  arrange(Order) %>%
+  slice_head(n = 20)
+
+# Define custom colors for treatment groups
+custom_colors <- c(
+  "M_Cont_12" = "black",
+  "M_17aE2"   = "blue",
+  "M_Cana"    = "green",
+  "M_Aca"     = "red",
+  "M_Rapa"    = "purple",
+  "M_CR"      = "orange"
+)
+
+# Calculate min/max for y-axis limits
+y_min <- min(top_20_lipids$FoldChange, na.rm = TRUE)
+y_max <- max(top_20_lipids$FoldChange, na.rm = TRUE)
+
+# Round y-axis limits for cleaner breaks
+y_min_rounded <- floor(y_min)
+y_max_rounded <- ceiling(y_max)
+
+# Create the plot
+p <- ggplot(top_20_lipids, aes(x = Grp_Sex, y = FoldChange, fill = Grp_Sex)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ Order, scales = "free_y", ncol = 4) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.title.x = element_blank(),
+    strip.text = element_text(size = 12),
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.spacing = unit(0.5, "lines"),
+    panel.border = element_rect(color = "grey", fill = NA, size = 0.5)
+  ) +
+  labs(
+    title = "Log2 Fold Changes for Top 20 SHAP-Ranked Lipids",
+    y = paste("Log2 Fold Change (compared to M_Cont_12)")
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  scale_y_continuous(
+    limits = c(y_min_rounded, y_max_rounded),
+    breaks = c(y_min_rounded, 0, y_max_rounded),
+    labels = function(x) format(x, nsmall = 1)
+  ) +
+  scale_fill_manual(values = custom_colors)
+
+# Display and save the plot
+print(p)
+ggsave("Top_20_Lipid_XGBoost_Log2FoldChange.pdf", p, width = 15, height = 12, dpi = 1200)
+
+
+
+```
+
+Plot the FAs in the TG
+```{r}
+
+# Load required libraries
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(openxlsx)
+library(stringr)
+
+# ==========================================================
+# 1. Read in data and filter to TG metabolites; standardize names
+# ==========================================================
+
+# Read XGBoost lipid deconvolution results
+Top_Shap_lipids <- read.xlsx("../Step12_LipidDeconvolution/XGBoost_lipid_deconvolution_regression.xlsx")
+Top_Shap_lipids_TG <- Top_Shap_lipids %>% 
+  filter(startsWith(Metabolite, "TG"))
+
+# Read fold-change data
+Fold_Change <- read.xlsx("../Step11_ShapPlot/FM_fold_changes_1400_XGBOOST.xlsx") %>% 
+  filter(startsWith(Metabolite, "TG"))
+
+# Define a function to standardize metabolite names
+standardize_metabolite_names <- function(metabolite) {
+  metabolite <- str_trim(metabolite)  # Remove leading/trailing spaces
+  metabolite <- str_replace_all(metabolite, "[:space:]+", "")  # Remove all spaces
+  metabolite <- str_replace_all(metabolite, "\\|", ".")         # Convert "|" to "."
+  metabolite <- str_replace_all(metabolite, "/", "_")            # Convert "/" to "_"
+  metabolite <- str_replace_all(metabolite, ":", ".")            # Convert ":" to "."
+  metabolite <- str_replace_all(metabolite, "-", ".")            # Convert "-" to "."
+  # Ensure "TG" is followed by a dot if missing
+  metabolite <- str_replace_all(metabolite, "(TG)([0-9])", "\\1.\\2")
+  # Fix TGO -> TG.O to match formatting in Top_Shap_lipids
+  metabolite <- str_replace_all(metabolite, "\\bTGO\\b", "TG.O")
+  return(metabolite)
+}
+
+# Standardize metabolite names in both datasets
+Fold_Change <- Fold_Change %>% mutate(Metabolite = standardize_metabolite_names(Metabolite))
+Top_Shap_lipids <- Top_Shap_lipids %>% mutate(Metabolite = standardize_metabolite_names(Metabolite))
+
+# ==========================================================
+# 2. Merge datasets and prepare merged data
+# ==========================================================
+
+# Merge the datasets on Metabolite and filter out rows without Total_C_Num
+merged_data <- Top_Shap_lipids %>% 
+  inner_join(Fold_Change, by = "Metabolite") %>% 
+  filter(!is.na(deconvoluted_Total_C_Num)) %>% 
+  mutate(
+    deconvoluted_Total_C_Num = as.numeric(deconvoluted_Total_C_Num),
+    deconvoluted_Saturation_Number = as.numeric(deconvoluted_Saturation_Number),
+    FoldChange = log2(FoldChange)  # Convert fold change to log2 scale
+  )
+
+# Subset the top 20 lipids by Order
+top_20_lipids <- merged_data %>% 
+  arrange(Order) %>% 
+  slice_head(n = 50)
+
+(unique(top_20_lipids$Order))
+
+# Compute overall direction and overall fold magnitude per metabolite.
+# (Since there is one FoldChange per metabolite, we use it directly.)
+top_20_lipids <- top_20_lipids %>%
+  mutate(
+    overall_direction = case_when(
+      FoldChange > 0 ~ "Up",
+      FoldChange < 0 ~ "Down",
+      TRUE ~ "Mixed"
+    ),
+    overall_fold = abs(FoldChange)
+  )
+
+#now we will see if the direction is changed in the same direction for all Grp_Sex per Metabolite
+top_20_lipids <- top_20_lipids %>%
+  group_by(Metabolite) %>%
+  mutate(
+    overall_fold_change = mean(abs(FoldChange), na.rm = TRUE),
+    overall_direction_combined = case_when(
+      all(FoldChange > 0) ~ "Up",
+      all(FoldChange < 0) ~ "Down",
+      TRUE ~ "Mixed"
+    )
+  ) %>%
+  ungroup()
+
+colnames(top_20_lipids)
+# ==========================================================
+# 3. Reshape the data to long format for TG fatty acid measurements
+# ==========================================================
+
+# For each metabolite, we have three TG fatty acid measurements:
+# - deconvoluted_TG_One_C_Num & deconvoluted_TG_One_Saturation_Number
+# - deconvoluted_TG_Two_C_Num & deconvoluted_TG_Two_Saturation_Number
+# - deconvoluted_TG_Three_C_Num & deconvoluted_TG_Three_Saturation_Number
+pooled_data <- bind_rows(
+  top_20_lipids %>% 
+    select(Metabolite, cnum = deconvoluted_TG_One_C_Num, db = deconvoluted_TG_One_Saturation_Number, 
+           overall_direction_combined, overall_fold_change),
+  top_20_lipids %>% 
+    select(Metabolite, cnum = deconvoluted_TG_Two_C_Num, db = deconvoluted_TG_Two_Saturation_Number, 
+           overall_direction_combined, overall_fold_change),
+  top_20_lipids %>% 
+    select(Metabolite, cnum = deconvoluted_TG_Three_C_Num, db = deconvoluted_TG_Three_Saturation_Number, 
+           overall_direction_combined, overall_fold_change)
+)
+
+# Convert the TG measurement columns to numeric and remove rows with missing values
+pooled_data_clean <- pooled_data %>%
+  mutate(
+    cnum = as.numeric(cnum),
+    db = as.numeric(db)
+  ) %>%
+  filter(!is.na(cnum), !is.na(db))
+
+pooled_data_clean <- pooled_data_clean %>% 
+  select(-Metabolite)
+
+pooled_data_clean <-  unique(pooled_data_clean)
+
+dim(pooled_data_clean)
+# ==========================================================
+# 4. Create the jitter plot
+# ==========================================================
+
+p <- ggplot(pooled_data_clean, aes(x = cnum, y = db)) +
+  geom_jitter(aes(color = overall_direction_combined, size = overall_fold_change),
+              alpha = .7, width = 0.2, height = 0.2) +
+  scale_color_manual(values = c("Up" = "blue", "Down" = "red", "Mixed" = "grey")) +
+  scale_size_continuous(range = c(1, 5)) +
+  scale_y_continuous(limits = c(0, 6), breaks = seq(0, 6, by = 1)) +
+  labs(
+    x = "TG Fatty Acid Carbon Number",
+    y = "Number of Double Bonds",
+    color = "Overall Direction",
+    size = "Absolute Log₂ Fold Change"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "right",
+        axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Display the plot
+print(p)
+
+# Optionally, save the plot to a PDF file
+ggsave("Fatty_Acid_Composition_Top10.pdf", p, width = 12, height = 8, dpi = 1200)
+ggsave("../Paper_Figures/Fatty_Acid_Composition_Top10.pdf", p, width = 12, height = 8, dpi = 1200)
+
+
+```
+
+
+Save text files with dependencies and version
+```{r}
+
+# Get the R version
+r_version <- R.version.string
+
+# Get the list of loaded packages and their versions
+loaded_packages <- sessionInfo()$otherPkgs
+package_info <- data.frame(
+  Package = names(loaded_packages),
+  Version = sapply(loaded_packages, function(pkg) pkg$Version),
+  stringsAsFactors = FALSE
+)
+
+# Define the output file
+output_file <- "../Paper_Figures/Package_Info/Step13_R_session_and_packgage_version_info.txt"
+
+# Write the R version to the file
+writeLines(paste("R Version:", r_version), output_file)
+
+# Write the package information
+write.table(package_info, file = output_file, append = TRUE, row.names = FALSE, sep = "\t", quote = FALSE)
+
+cat("Session info written to", output_file, "\n")
+
+
+```
